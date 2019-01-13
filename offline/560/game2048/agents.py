@@ -55,7 +55,7 @@ class myAgent(Agent):
                 "`%s` can only work with game of `size` 4." % self.__class__.__name__)
         super().__init__(game, display)
         device = torch.device('cuda')
-        model = torch.load('/mnt/H/yunyun/560/mymodel.pth')
+        model = torch.load('/wlw/D/560/mymodel.pth')
 
         model.to('cpu')
         self.search_func = model
