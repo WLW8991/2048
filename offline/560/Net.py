@@ -5,7 +5,7 @@ class myNet(nn.Module):
     def __init__(self):
         super(myNet, self).__init__()
         self.conv1 = nn.Conv2d(in_channels=1, out_channels=16, kernel_size=[1, 1])  # 16*4*4
-        self.conv2 = nn.Conv2d(in_channels=16, out_channels=64, kernel_size=[2, 1])  # 64*4*3
+        self.conv2 = nn.Conv2d(in_channels=16, out_channels=64, kernel_size=[2, 1])  # 64*3*4
         self.conv3 = nn.Conv2d(in_channels=64, out_channels=128, kernel_size=[1, 2])  # 128*3*3
         self.conv4 = nn.Conv2d(in_channels=128, out_channels=256, kernel_size=[2, 1])  # 256*3*2
 
@@ -27,7 +27,4 @@ class myNet(nn.Module):
         x = self.fc3(x)
 
         return F.log_softmax(x)
-
-
-
 
